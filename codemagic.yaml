@@ -1,0 +1,10 @@
+workflows:
+  build-android:
+    name: Build Android APK
+    environment:
+      vars:
+        PACKAGE_NAME: "com.sensengine.app"
+    scripts:
+      - echo "Building APK from PWA"
+    artifacts:
+      - build/**/*.apk
