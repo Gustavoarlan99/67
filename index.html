@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Jogo da Velha</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body{font-family:Arial;background:#111;color:#fff;text-align:center;margin:0;padding:20px}
+h1{margin-bottom:20px}
+#board{display:grid;grid-template-columns:repeat(3,100px);grid-gap:5px;justify-content:center}
+.cell{width:100px;height:100px;background:#222;font-size:40px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+button{margin-top:20px;padding:10px 20px;font-size:16px}
+</style>
+</head>
+<body>
+
+<h1>Jogo da Velha</h1>
+
+<div id="board"></div>
+<button onclick="resetGame()">Reiniciar</button>
+
+<script src="game.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+ navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
